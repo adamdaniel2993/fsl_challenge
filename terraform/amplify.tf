@@ -1,6 +1,7 @@
 resource "aws_amplify_app" "fsl_react_app" {
   name       = "fsl-react-app-${var.environment}"
   repository = "https://github.com/adamdaniel2993/fsl_challenge"
+  access_token = data.aws_ssm_parameter.fsl_token
 
   # The default build_spec added by the Amplify Console for React.
   build_spec = <<-EOT
