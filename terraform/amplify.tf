@@ -36,7 +36,7 @@ resource "aws_amplify_app" "fsl_react_app" {
 
 resource "aws_amplify_branch" "main" {
   app_id      = aws_amplify_app.fsl_react_app.id
-  branch_name = "main"
+  branch_name = var.branch_name
 
   framework = "React"
   stage     = terraform.workspace

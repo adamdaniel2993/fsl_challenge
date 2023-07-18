@@ -3,3 +3,9 @@ variable "environment" {
     description = "environment"
   
 }
+
+variable "branch_name" {
+    type = string
+    description = "branch name for amplify to point to"
+  
+}
